@@ -5,40 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu Nome - Portfólio</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+        /* Reset CSS */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #ff5e62, #ff9966);
+            color: #fff;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         header {
-            background-color: #333;
-            color: white;
             text-align: center;
-            padding: 1em;
+            padding: 100px 0;
         }
 
-        section {
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 1em;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2, h3 {
-            color: #333;
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
         }
 
         p {
-            line-height: 1.6;
-            color: #555;
+            font-size: 1.2em;
+        }
+
+        section {
+            padding: 50px 0;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+            text-align: center;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .project {
             margin-bottom: 1.5em;
+        }
+
+        .project h3 {
+            color: #fd746c;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 1em;
+            }
         }
     </style>
 </head>
@@ -49,28 +103,32 @@
         <p>Desenvolvedor Web</p>
     </header>
 
-    <section>
-        <h2>Sobre Mim</h2>
-        <p>Olá! Sou um desenvolvedor web apaixonado por criar experiências incríveis na web.</p>
-    </section>
-
-    <section>
-        <h2>Projetos</h2>
-
-        <div class="project">
-            <h3>Projeto 1</h3>
-            <p>Descrição do projeto 1.</p>
-        </div>
-
-        <div class="project">
-            <h3>Projeto 2</h3>
-            <p>Descrição do projeto 2.</p>
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou um desenvolvedor web apaixonado por criar experiências incríveis na web.</p>
         </div>
     </section>
 
-    <section>
-        <h2>Habilidades</h2>
-        <p>HTML, CSS, JavaScript, etc.</p>
+    <section id="projects">
+        <div class="container">
+            <h2>Projetos</h2>
+            <div class="project">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1.</p>
+            </div>
+            <div class="project">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <p>HTML, CSS, JavaScript, etc.</p>
+        </div>
     </section>
 
     <footer>
